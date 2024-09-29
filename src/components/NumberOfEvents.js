@@ -8,9 +8,9 @@ function NumberOfEvents({ setCurrentNOE, setErrorAlert }) {
   const handleInputChanged = (event) => {
     const value = event.target.value;
     if (value < 1 || isNaN(value)) {
-      setErrorAlert('Enter a valid number');
+      setErrorAlert('Enter a valid number'); // Show error alert
     } else {
-      setErrorAlert('');
+      setErrorAlert(''); // Clear error alert if input is valid
       setNumberOfEvents(value);
       setCurrentNOE(value);
     }

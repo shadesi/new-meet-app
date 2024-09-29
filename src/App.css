@@ -99,3 +99,11 @@ input[type="number"] {
 .details-btn:hover {
   background-color: #45a049; /* Darker green on hover */
 }
+
+.alerts-container {
+  position: fixed;
+  top: 0px;
+  left: 20px;
+  width: 250px;
+  z-index: 1000;
+}

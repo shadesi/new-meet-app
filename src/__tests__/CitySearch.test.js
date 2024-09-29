@@ -12,7 +12,13 @@ describe('<CitySearch /> component', () => {
   let cityTextBox;
 
   beforeEach(() => {
-    CitySearchComponent = render(<CitySearch allLocations={allLocations} />);
+    CitySearchComponent = render(
+      <CitySearch 
+        allLocations={allLocations} 
+        setCurrentCity={() => { }}   // Mock setCurrentCity function
+        setInfoAlert={() => { }}     // Mock setInfoAlert function to prevent errors
+      />
+    );
     cityTextBox = CitySearchComponent.getByRole('textbox');
   });
 
