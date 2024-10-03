@@ -1,6 +1,7 @@
 // src/api.js
 
 import mockData from "./mock-data";
+import NProgress from 'nprogress'; // Ensure you're importing NProgress if needed
 
 /**
  * Extract locations from the events data, removing duplicates.
@@ -55,6 +56,13 @@ const checkToken = async (accessToken) => {
  * @returns Promise resolving to the array of events
  */
 export const getEvents = async (currentCity, currentNOE) => {
+  if (!navigator.onLine) {
+    // Load events from localStorage if offline
+    const events = localStorage.getItem("lastEvents");
+    NProgress.done();
+    return events ? JSON.parse(events) : [];
+  }
+
   if (window.location.href.startsWith("http://localhost:3000/")) {
     return mockData.slice(0, currentNOE); // Simulate fetching a specific number of events
   }
@@ -62,10 +70,16 @@ export const getEvents = async (currentCity, currentNOE) => {
   const token = await getAccessToken();
   if (token) {
     removeQuery();
-    const url = `YOUR_GET_EVENTS_API_ENDPOINT/${token}?city=Berlin${currentCity}&number=5${currentNOE}`; // Modify to include city and number
+    const url = `YOUR_GET_EVENTS_API_ENDPOINT/${token}?city=${currentCity}&number=${currentNOE}`;
     const response = await fetch(url);
     const result = await response.json();
-    return result.events || null;
+
+    if (result) {
+      NProgress.done();
+      localStorage.setItem("lastEvents", JSON.stringify(result.events)); // Save events to localStorage
+      return result.events;
+    }
+    return null;
   }
 };
 
@@ -97,3 +111,4 @@ const getToken = async (code) => {
   }
   return access_token;
 };
+
