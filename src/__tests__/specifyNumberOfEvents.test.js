@@ -4,7 +4,7 @@ import { loadFeature } from 'jest-cucumber';
 import { render, screen, fireEvent } from '@testing-library/react';
 import App from '../App';
 
-const feature = loadFeature('./features/specifyNumberOfEvents.feature');
+const feature = loadFeature('../features/specifyNumberOfEvents.feature');
 
 defineFeature(feature, test => {
   test('User selects to view a specific number of events', ({ given, when, then }) => {

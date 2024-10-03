@@ -25,7 +25,7 @@ defineFeature(feature, (test) => {
             await waitFor(() => {
                 const EventListItems = within(EventListDOM).queryAllByRole('listitem');
                 expect(EventListItems.length).toBe(32); // Ensure this matches your mock data
-                // Optionally, you can check if specific events are rendered
+                expect(EventListItems[0]).toHaveTextContent('Specific Event Title'); // Add specific checks
             });
         });
     });
@@ -42,7 +42,7 @@ defineFeature(feature, (test) => {
             const user = userEvent.setup();
             const AppDOM = AppComponent.container.firstChild;
             CitySearchDOM = AppDOM.querySelector('#city-search');
-            const citySearchInput = within(CitySearchDOM).queryByRole('textbox');
+            const citySearchInput = within(CitySearchDOM).getByRole('textbox');
             await user.type(citySearchInput, "Berlin");
         });
 
@@ -50,7 +50,7 @@ defineFeature(feature, (test) => {
             const suggestionListItems = within(CitySearchDOM).queryAllByRole('listitem');
             await waitFor(() => {
                 expect(suggestionListItems).toHaveLength(2); // Adjust based on your mock data
-            });
+            }, { timeout: 5000 }); // Optional timeout
         });
     });
 
@@ -66,7 +66,7 @@ defineFeature(feature, (test) => {
             const user = userEvent.setup();
             AppDOM = AppComponent.container.firstChild;
             CitySearchDOM = AppDOM.querySelector('#city-search');
-            citySearchInput = within(CitySearchDOM).queryByRole('textbox');
+            citySearchInput = within(CitySearchDOM).getByRole('textbox');
             await user.type(citySearchInput, "Berlin");
         });
 
@@ -95,6 +95,30 @@ defineFeature(feature, (test) => {
             const berlinEvents = allEvents.filter(event => event.location === 'Berlin, Germany');
             await waitFor(() => {
                 expect(EventListItems).toHaveLength(berlinEvents.length);
+            });
+        });
+    });
+
+    // Additional scenario: User should see no suggestions for a non-existent city.
+    test('User should see no suggestions for a non-existent city.', ({ given, when, then }) => {
+        let AppComponent;
+        given('the main page is open', () => {
+            AppComponent = render(<App />);
+        });
+
+        let CitySearchDOM;
+        when('user types in a non-existent city', async () => {
+            const user = userEvent.setup();
+            const AppDOM = AppComponent.container.firstChild;
+            CitySearchDOM = AppDOM.querySelector('#city-search');
+            const citySearchInput = within(CitySearchDOM).getByRole('textbox');
+            await user.type(citySearchInput, "NonExistentCity");
+        });
+
+        then('the user should see no suggestions', async () => {
+            const suggestionListItems = within(CitySearchDOM).queryAllByRole('listitem');
+            await waitFor(() => {
+                expect(suggestionListItems).toHaveLength(0);
             });
         });
     });

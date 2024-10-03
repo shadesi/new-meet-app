@@ -4,7 +4,7 @@ import { defineFeature, loadFeature } from 'jest-cucumber';
 import { render, screen, fireEvent } from '@testing-library/react';
 import App from '../App';
 
-const feature = loadFeature('./src/features/showHideAnEventsDetails.feature');
+const feature = loadFeature('../features/showHideAnEventsDetails.feature');
 
 defineFeature(feature, test => {
   test('User clicks on an event to view details', ({ given, when, then }) => {

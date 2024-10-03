@@ -1,6 +1,5 @@
 // src/setupTests.js
-
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom'; // Just this line is enough
 
 // Mock getSelection to prevent errors in tests
 Object.defineProperty(window, 'getSelection', {
@@ -12,7 +11,6 @@ Object.defineProperty(window, 'getSelection', {
   }),
   writable: true,
 });
-
 
 // List of warning/error messages to intentionally prevent from appearing in the test output
 const MESSAGES_TO_IGNORE = [
