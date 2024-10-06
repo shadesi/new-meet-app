@@ -1,7 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
- "icons": [
+  "short_name": "Meet App",
+  "name": "Meet Event Finder",
+  "icons": [
     {
       "src": "favicon.ico",
       "type": "image/x-icon",
@@ -27,7 +27,7 @@
       "purpose": "maskable"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

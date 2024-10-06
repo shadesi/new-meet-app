@@ -1,3 +1,5 @@
+// src/components/CitySearch.js
+
 import React, { useState } from "react";
 
 const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
@@ -22,11 +24,11 @@ const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
   };
 
   const handleItemClicked = (event) => {
-    const value = event.target.textContent.trim(); // Trim whitespace
+    const value = event.target.textContent.trim();
     setQuery(value);
     setShowSuggestions(false);
     setCurrentCity(value);
-    setInfoAlert(""); // Clear alert after selection
+    setInfoAlert("");
   };
 
   return (
@@ -36,10 +38,10 @@ const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
         className="city"
         placeholder="Search for a city"
         value={query}
-        onFocus={() => setShowSuggestions(query.length > 0)} // Show suggestions if there's a query
+        onFocus={() => setShowSuggestions(query.length > 0 && suggestions.length > 0)} // Only show suggestions if there's input
         onChange={handleInputChanged}
       />
-      {showSuggestions && suggestions.length > 0 && (
+      {showSuggestions && (
         <ul className="suggestions">
           {suggestions.map((suggestion) => (
             <li onClick={handleItemClicked} key={suggestion}>

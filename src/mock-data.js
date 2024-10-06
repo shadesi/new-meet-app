@@ -1,1375 +1,655 @@
 // src/mock-data.js
 
-const mockData = [
+const events = [
     {
-     "kind": "calendar#event",
-     "etag": "\"3181161784712000\"",
-     "id": "4eahs9ghkhrvkld72hogu9ph3e_20200519T140000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=NGVhaHM5Z2hraHJ2a2xkNzJob2d1OXBoM2VfMjAyMDA1MTlUMTQwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:17:46.000Z",
-     "updated": "2020-05-27T12:01:32.356Z",
-     "summary": "Learn JavaScript",
-     "description": "Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.",
-     "location": "London, UK",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-05-19T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-05-19T17:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "4eahs9ghkhrvkld72hogu9ph3e",
-     "originalStartTime": {
-      "dateTime": "2020-05-19T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "4eahs9ghkhrvkld72hogu9ph3e@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
+      kind: "calendar#event",
+      etag: '"3181161784712000"',
+      id: "berlin_event_1",
+      status: "confirmed",
+      htmlLink: "https://www.google.com/calendar/event?eid=berlin_event_1",
+      created: "2020-05-01T19:17:46.000Z",
+      updated: "2020-05-27T12:01:32.356Z",
+      summary: "React Workshop",
+      description: "Join us for a React workshop.",
+      location: "Berlin, Germany",
+      creator: { email: "example@domain.com", self: true },
+      organizer: { email: "example@domain.com", self: true },
+      start: { dateTime: "2020-06-01T14:00:00+02:00", timeZone: "Europe/Berlin" },
+      end: { dateTime: "2020-06-01T15:00:00+02:00", timeZone: "Europe/Berlin" },
+      recurringEventId: "berlin_event_1",
+      originalStartTime: { dateTime: "2020-06-01T14:00:00+02:00", timeZone: "Europe/Berlin" },
+      iCalUID: "berlin_event_1@google.com",
+      sequence: 0,
+      reminders: { useDefault: true },
+      eventType: "default",
     },
     {
-     "kind": "calendar#event",
-     "etag": "\"3181159875584000\"",
-     "id": "3qtd6uscq4tsi6gc7nmmtpqlct_20200520T120000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=M3F0ZDZ1c2NxNHRzaTZnYzdubW10cHFsY3RfMjAyMDA1MjBUMTIwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:14:30.000Z",
-     "updated": "2020-05-27T11:45:37.792Z",
-     "summary": "React is Fun",
-     "description": "Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ",
-     "location": "Berlin, Germany",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-05-20T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-05-20T15:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "3qtd6uscq4tsi6gc7nmmtpqlct",
-     "originalStartTime": {
-      "dateTime": "2020-05-20T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "3qtd6uscq4tsi6gc7nmmtpqlct@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
+      kind: "calendar#event",
+      etag: '"3181159875584000"',
+      id: "berlin_event_2",
+      status: "confirmed",
+      htmlLink: "https://www.google.com/calendar/event?eid=berlin_event_2",
+      created: "2020-05-01T13:29:24.000Z",
+      updated: "2020-05-19T15:08:23.292Z",
+      summary: "JavaScript Meetup",
+      description: "A casual meetup to discuss JS trends.",
+      location: "Berlin, Germany",
+      creator: { email: "example@domain.com", self: true },
+      organizer: { email: "example@domain.com", self: true },
+      start: { dateTime: "2020-06-02T16:00:00+02:00", timeZone: "Europe/Berlin" },
+      end: { dateTime: "2020-06-02T17:00:00+02:00", timeZone: "Europe/Berlin" },
+      iCalUID: "berlin_event_2@google.com",
+      sequence: 0,
+      reminders: { useDefault: true },
+      eventType: "default",
     },
     {
-     "kind": "calendar#event",
-     "etag": "\"3181161784712000\"",
-     "id": "4eahs9ghkhrvkld72hogu9ph3e_20200521T140000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=NGVhaHM5Z2hraHJ2a2xkNzJob2d1OXBoM2VfMjAyMDA1MjFUMTQwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:17:46.000Z",
-     "updated": "2020-05-27T12:01:32.356Z",
-     "summary": "Learn JavaScript",
-     "description": "Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.",
-     "location": "London, UK",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-05-21T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-05-21T17:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "4eahs9ghkhrvkld72hogu9ph3e",
-     "originalStartTime": {
-      "dateTime": "2020-05-21T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "4eahs9ghkhrvkld72hogu9ph3e@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
+      kind: "calendar#event",
+      etag: '"3181159875584001"',
+      id: "berlin_event_3",
+      status: "confirmed",
+      htmlLink: "https://www.google.com/calendar/event?eid=berlin_event_3",
+      created: "2020-05-01T15:29:24.000Z",
+      updated: "2020-05-19T14:08:23.292Z",
+      summary: "Angular Workshop",
+      description: "Learn the basics of Angular in this workshop.",
+      location: "Berlin, Germany",
+      creator: { email: "example@domain.com", self: true },
+      organizer: { email: "example@domain.com", self: true },
+      start: { dateTime: "2020-06-03T10:00:00+02:00", timeZone: "Europe/Berlin" },
+      end: { dateTime: "2020-06-03T11:00:00+02:00", timeZone: "Europe/Berlin" },
+      iCalUID: "berlin_event_3@google.com",
+      sequence: 0,
+      reminders: { useDefault: true },
+      eventType: "default",
     },
     {
-     "kind": "calendar#event",
-     "etag": "\"3181159875584000\"",
-     "id": "3qtd6uscq4tsi6gc7nmmtpqlct_20200522T120000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=M3F0ZDZ1c2NxNHRzaTZnYzdubW10cHFsY3RfMjAyMDA1MjJUMTIwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:14:30.000Z",
-     "updated": "2020-05-27T11:45:37.792Z",
-     "summary": "React is Fun",
-     "description": "Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ",
-     "location": "Berlin, Germany",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-05-22T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-05-22T15:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "3qtd6uscq4tsi6gc7nmmtpqlct",
-     "originalStartTime": {
-      "dateTime": "2020-05-22T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "3qtd6uscq4tsi6gc7nmmtpqlct@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
+      kind: "calendar#event",
+      etag: '"3181161784712001"',
+      id: "berlin_event_4",
+      status: "confirmed",
+      htmlLink: "https://www.google.com/calendar/event?eid=berlin_event_4",
+      created: "2020-05-03T10:17:46.000Z",
+      updated: "2020-05-28T12:01:32.356Z",
+      summary: "Node.js Training",
+      description: "A beginner's guide to Node.js.",
+      location: "Berlin, Germany",
+      creator: { email: "example@domain.com", self: true },
+      organizer: { email: "example@domain.com", self: true },
+      start: { dateTime: "2020-06-04T14:00:00+02:00", timeZone: "Europe/Berlin" },
+      end: { dateTime: "2020-06-04T15:00:00+02:00", timeZone: "Europe/Berlin" },
+      recurringEventId: "berlin_event_4",
+      originalStartTime: { dateTime: "2020-06-04T14:00:00+02:00", timeZone: "Europe/Berlin" },
+      iCalUID: "berlin_event_4@google.com",
+      sequence: 0,
+      reminders: { useDefault: true },
+      eventType: "default",
     },
     {
-     "kind": "calendar#event",
-     "etag": "\"3181161784712000\"",
-     "id": "4eahs9ghkhrvkld72hogu9ph3e_20200523T140000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=NGVhaHM5Z2hraHJ2a2xkNzJob2d1OXBoM2VfMjAyMDA1MjNUMTQwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:17:46.000Z",
-     "updated": "2020-05-27T12:01:32.356Z",
-     "summary": "Learn JavaScript",
-     "description": "Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.",
-     "location": "London, UK",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-05-23T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-05-23T17:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "4eahs9ghkhrvkld72hogu9ph3e",
-     "originalStartTime": {
-      "dateTime": "2020-05-23T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "4eahs9ghkhrvkld72hogu9ph3e@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
+      kind: "calendar#event",
+      etag: '"3181159875584005"',
+      id: "berlin_event_5",
+      status: "confirmed",
+      htmlLink: "https://www.google.com/calendar/event?eid=berlin_event_5",
+      created: "2020-05-10T12:00:46.000Z",
+      updated: "2020-05-25T11:08:23.292Z",
+      summary: "Web Dev Conference",
+      description: "Conference on modern web development techniques.",
+      location: "Berlin, Germany",
+      creator: { email: "example@domain.com", self: true },
+      organizer: { email: "example@domain.com", self: true },
+      start: { dateTime: "2020-06-05T09:00:00+02:00", timeZone: "Europe/Berlin" },
+      end: { dateTime: "2020-06-05T17:00:00+02:00", timeZone: "Europe/Berlin" },
+      iCalUID: "berlin_event_5@google.com",
+      sequence: 0,
+      reminders: { useDefault: true },
+      eventType: "default",
     },
     {
-     "kind": "calendar#event",
-     "etag": "\"3181159875584000\"",
-     "id": "3qtd6uscq4tsi6gc7nmmtpqlct_20200525T120000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=M3F0ZDZ1c2NxNHRzaTZnYzdubW10cHFsY3RfMjAyMDA1MjVUMTIwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:14:30.000Z",
-     "updated": "2020-05-27T11:45:37.792Z",
-     "summary": "React is Fun",
-     "description": "Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ",
-     "location": "Berlin, Germany",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-05-25T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-05-25T15:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "3qtd6uscq4tsi6gc7nmmtpqlct",
-     "originalStartTime": {
-      "dateTime": "2020-05-25T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "3qtd6uscq4tsi6gc7nmmtpqlct@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
+      kind: "calendar#event",
+      etag: '"3181159875584006"',
+      id: "berlin_event_6",
+      status: "confirmed",
+      htmlLink: "https://www.google.com/calendar/event?eid=berlin_event_6",
+      created: "2020-05-12T16:00:46.000Z",
+      updated: "2020-05-28T11:08:23.292Z",
+      summary: "UX/UI Design Meetup",
+      description: "Discuss trends in UX/UI design.",
+      location: "Berlin, Germany",
+      creator: { email: "example@domain.com", self: true },
+      organizer: { email: "example@domain.com", self: true },
+      start: { dateTime: "2020-06-06T12:00:00+02:00", timeZone: "Europe/Berlin" },
+      end: { dateTime: "2020-06-06T13:00:00+02:00", timeZone: "Europe/Berlin" },
+      iCalUID: "berlin_event_6@google.com",
+      sequence: 0,
+      reminders: { useDefault: true },
+      eventType: "default",
     },
     {
-     "kind": "calendar#event",
-     "etag": "\"3181161784712000\"",
-     "id": "4eahs9ghkhrvkld72hogu9ph3e_20200526T140000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=NGVhaHM5Z2hraHJ2a2xkNzJob2d1OXBoM2VfMjAyMDA1MjZUMTQwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:17:46.000Z",
-     "updated": "2020-05-27T12:01:32.356Z",
-     "summary": "Learn JavaScript",
-     "description": "Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.",
-     "location": "London, UK",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-05-26T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-05-26T17:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "4eahs9ghkhrvkld72hogu9ph3e",
-     "originalStartTime": {
-      "dateTime": "2020-05-26T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "4eahs9ghkhrvkld72hogu9ph3e@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
+        kind: "calendar#event",
+        etag: '"3181159875584007"',
+        id: "berlin_event_7",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=berlin_event_7",
+        created: "2020-05-15T14:00:46.000Z",
+        updated: "2020-05-28T14:08:23.292Z",
+        summary: "Machine Learning Workshop",
+        description: "Introductory workshop on machine learning concepts.",
+        location: "Berlin, Germany",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-06-07T14:00:00+02:00", timeZone: "Europe/Berlin" },
+        end: { dateTime: "2020-06-07T15:30:00+02:00", timeZone: "Europe/Berlin" },
+        iCalUID: "berlin_event_7@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584008"',
+        id: "berlin_event_8",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=berlin_event_8",
+        created: "2020-05-16T09:00:46.000Z",
+        updated: "2020-05-28T11:08:23.292Z",
+        summary: "Blockchain Seminar",
+        description: "Learn about the latest trends in blockchain technology.",
+        location: "Berlin, Germany",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-06-08T10:00:00+02:00", timeZone: "Europe/Berlin" },
+        end: { dateTime: "2020-06-08T12:00:00+02:00", timeZone: "Europe/Berlin" },
+        iCalUID: "berlin_event_8@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584009"',
+        id: "berlin_event_9",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=berlin_event_9",
+        created: "2020-05-17T11:00:46.000Z",
+        updated: "2020-05-28T12:08:23.292Z",
+        summary: "Cloud Computing Workshop",
+        description: "An interactive session on cloud computing basics.",
+        location: "Berlin, Germany",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-06-09T14:00:00+02:00", timeZone: "Europe/Berlin" },
+        end: { dateTime: "2020-06-09T16:00:00+02:00", timeZone: "Europe/Berlin" },
+        iCalUID: "berlin_event_9@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584010"',
+        id: "berlin_event_10",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=berlin_event_10",
+        created: "2020-05-18T08:00:46.000Z",
+        updated: "2020-05-28T12:08:23.292Z",
+        summary: "AI and Ethics Panel",
+        description: "A discussion on the ethical implications of AI.",
+        location: "Berlin, Germany",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-06-10T14:00:00+02:00", timeZone: "Europe/Berlin" },
+        end: { dateTime: "2020-06-10T15:30:00+02:00", timeZone: "Europe/Berlin" },
+        iCalUID: "berlin_event_10@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584011"',
+        id: "berlin_event_11",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=berlin_event_11",
+        created: "2020-05-19T09:00:46.000Z",
+        updated: "2020-05-28T13:08:23.292Z",
+        summary: "DevOps Best Practices",
+        description: "A guide to modern DevOps practices.",
+        location: "Berlin, Germany",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-06-11T10:00:00+02:00", timeZone: "Europe/Berlin" },
+        end: { dateTime: "2020-06-11T11:00:00+02:00", timeZone: "Europe/Berlin" },
+        iCalUID: "berlin_event_11@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584012"',
+        id: "berlin_event_12",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=berlin_event_12",
+        created: "2020-05-20T08:00:46.000Z",
+        updated: "2020-05-28T13:08:23.292Z",
+        summary: "Python Programming Basics",
+        description: "A beginner's session on Python programming.",
+        location: "Berlin, Germany",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-06-12T14:00:00+02:00", timeZone: "Europe/Berlin" },
+        end: { dateTime: "2020-06-12T15:30:00+02:00", timeZone: "Europe/Berlin" },
+        iCalUID: "berlin_event_12@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584013"',
+        id: "berlin_event_13",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=berlin_event_13",
+        created: "2020-05-21T09:00:46.000Z",
+        updated: "2020-05-28T13:08:23.292Z",
+        summary: "Data Science Meetup",
+        description: "Meet and discuss data science techniques.",
+        location: "Berlin, Germany",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-06-13T14:00:00+02:00", timeZone: "Europe/Berlin" },
+        end: { dateTime: "2020-06-13T15:00:00+02:00", timeZone: "Europe/Berlin" },
+        iCalUID: "berlin_event_13@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584014"',
+        id: "berlin_event_14",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=berlin_event_14",
+        created: "2020-05-22T08:00:46.000Z",
+        updated: "2020-05-28T13:08:23.292Z",
+        summary: "GraphQL Workshop",
+        description: "Learn GraphQL in this hands-on workshop.",
+        location: "Berlin, Germany",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-06-14T10:00:00+02:00", timeZone: "Europe/Berlin" },
+        end: { dateTime: "2020-06-14T11:30:00+02:00", timeZone: "Europe/Berlin" },
+        iCalUID: "berlin_event_14@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584015"',
+        id: "berlin_event_15",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=berlin_event_15",
+        created: "2020-05-23T09:00:46.000Z",
+        updated: "2020-05-28T14:08:23.292Z",
+        summary: "Web Development Bootcamp",
+        description: "A 2-day bootcamp on full-stack web development.",
+        location: "Berlin, Germany",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-06-15T09:00:00+02:00", timeZone: "Europe/Berlin" },
+        end: { dateTime: "2020-06-15T17:00:00+02:00", timeZone: "Europe/Berlin" },
+        iCalUID: "berlin_event_15@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584016"',
+        id: "berlin_event_16",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=berlin_event_16",
+        created: "2020-05-24T10:00:46.000Z",
+        updated: "2020-05-28T15:08:23.292Z",
+        summary: "Advanced JavaScript Workshop",
+        description: "Learn advanced JavaScript techniques in this workshop.",
+        location: "Berlin, Germany",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-06-16T14:00:00+02:00", timeZone: "Europe/Berlin" },
+        end: { dateTime: "2020-06-16T16:00:00+02:00", timeZone: "Europe/Berlin" },
+        iCalUID: "berlin_event_16@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+
+    //London Events
     {
-     "kind": "calendar#event",
-     "etag": "\"3181159875584000\"",
-     "id": "3qtd6uscq4tsi6gc7nmmtpqlct_20200527T120000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=M3F0ZDZ1c2NxNHRzaTZnYzdubW10cHFsY3RfMjAyMDA1MjdUMTIwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:14:30.000Z",
-     "updated": "2020-05-27T11:45:37.792Z",
-     "summary": "React is Fun",
-     "description": "Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ",
-     "location": "Berlin, Germany",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-05-27T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-05-27T15:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "3qtd6uscq4tsi6gc7nmmtpqlct",
-     "originalStartTime": {
-      "dateTime": "2020-05-27T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "3qtd6uscq4tsi6gc7nmmtpqlct@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181161784712000\"",
-     "id": "4eahs9ghkhrvkld72hogu9ph3e_20200528T140000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=NGVhaHM5Z2hraHJ2a2xkNzJob2d1OXBoM2VfMjAyMDA1MjhUMTQwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:17:46.000Z",
-     "updated": "2020-05-27T12:01:32.356Z",
-     "summary": "Learn JavaScript",
-     "description": "Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.",
-     "location": "London, UK",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-05-28T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-05-28T17:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "4eahs9ghkhrvkld72hogu9ph3e",
-     "originalStartTime": {
-      "dateTime": "2020-05-28T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "4eahs9ghkhrvkld72hogu9ph3e@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181159875584000\"",
-     "id": "3qtd6uscq4tsi6gc7nmmtpqlct_20200529T120000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=M3F0ZDZ1c2NxNHRzaTZnYzdubW10cHFsY3RfMjAyMDA1MjlUMTIwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:14:30.000Z",
-     "updated": "2020-05-27T11:45:37.792Z",
-     "summary": "React is Fun",
-     "description": "Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ",
-     "location": "Berlin, Germany",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-05-29T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-05-29T15:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "3qtd6uscq4tsi6gc7nmmtpqlct",
-     "originalStartTime": {
-      "dateTime": "2020-05-29T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "3qtd6uscq4tsi6gc7nmmtpqlct@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181161784712000\"",
-     "id": "4eahs9ghkhrvkld72hogu9ph3e_20200530T140000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=NGVhaHM5Z2hraHJ2a2xkNzJob2d1OXBoM2VfMjAyMDA1MzBUMTQwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:17:46.000Z",
-     "updated": "2020-05-27T12:01:32.356Z",
-     "summary": "Learn JavaScript",
-     "description": "Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.",
-     "location": "London, UK",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-05-30T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-05-30T17:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "4eahs9ghkhrvkld72hogu9ph3e",
-     "originalStartTime": {
-      "dateTime": "2020-05-30T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "4eahs9ghkhrvkld72hogu9ph3e@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181159875584000\"",
-     "id": "3qtd6uscq4tsi6gc7nmmtpqlct_20200601T120000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=M3F0ZDZ1c2NxNHRzaTZnYzdubW10cHFsY3RfMjAyMDA2MDFUMTIwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:14:30.000Z",
-     "updated": "2020-05-27T11:45:37.792Z",
-     "summary": "React is Fun",
-     "description": "Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ",
-     "location": "Berlin, Germany",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-01T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-01T15:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "3qtd6uscq4tsi6gc7nmmtpqlct",
-     "originalStartTime": {
-      "dateTime": "2020-06-01T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "3qtd6uscq4tsi6gc7nmmtpqlct@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181161784712000\"",
-     "id": "4eahs9ghkhrvkld72hogu9ph3e_20200602T140000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=NGVhaHM5Z2hraHJ2a2xkNzJob2d1OXBoM2VfMjAyMDA2MDJUMTQwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:17:46.000Z",
-     "updated": "2020-05-27T12:01:32.356Z",
-     "summary": "Learn JavaScript",
-     "description": "Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.",
-     "location": "London, UK",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-02T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-02T17:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "4eahs9ghkhrvkld72hogu9ph3e",
-     "originalStartTime": {
-      "dateTime": "2020-06-02T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "4eahs9ghkhrvkld72hogu9ph3e@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181159875584000\"",
-     "id": "3qtd6uscq4tsi6gc7nmmtpqlct_20200603T120000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=M3F0ZDZ1c2NxNHRzaTZnYzdubW10cHFsY3RfMjAyMDA2MDNUMTIwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:14:30.000Z",
-     "updated": "2020-05-27T11:45:37.792Z",
-     "summary": "React is Fun",
-     "description": "Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ",
-     "location": "Berlin, Germany",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-03T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-03T15:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "3qtd6uscq4tsi6gc7nmmtpqlct",
-     "originalStartTime": {
-      "dateTime": "2020-06-03T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "3qtd6uscq4tsi6gc7nmmtpqlct@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181161784712000\"",
-     "id": "4eahs9ghkhrvkld72hogu9ph3e_20200604T140000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=NGVhaHM5Z2hraHJ2a2xkNzJob2d1OXBoM2VfMjAyMDA2MDRUMTQwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:17:46.000Z",
-     "updated": "2020-05-27T12:01:32.356Z",
-     "summary": "Learn JavaScript",
-     "description": "Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.",
-     "location": "London, UK",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-04T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-04T17:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "4eahs9ghkhrvkld72hogu9ph3e",
-     "originalStartTime": {
-      "dateTime": "2020-06-04T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "4eahs9ghkhrvkld72hogu9ph3e@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181159875584000\"",
-     "id": "3qtd6uscq4tsi6gc7nmmtpqlct_20200605T120000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=M3F0ZDZ1c2NxNHRzaTZnYzdubW10cHFsY3RfMjAyMDA2MDVUMTIwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:14:30.000Z",
-     "updated": "2020-05-27T11:45:37.792Z",
-     "summary": "React is Fun",
-     "description": "Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ",
-     "location": "Berlin, Germany",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-05T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-05T15:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "3qtd6uscq4tsi6gc7nmmtpqlct",
-     "originalStartTime": {
-      "dateTime": "2020-06-05T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "3qtd6uscq4tsi6gc7nmmtpqlct@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181161784712000\"",
-     "id": "4eahs9ghkhrvkld72hogu9ph3e_20200606T140000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=NGVhaHM5Z2hraHJ2a2xkNzJob2d1OXBoM2VfMjAyMDA2MDZUMTQwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:17:46.000Z",
-     "updated": "2020-05-27T12:01:32.356Z",
-     "summary": "Learn JavaScript",
-     "description": "Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.",
-     "location": "London, UK",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-06T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-06T17:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "4eahs9ghkhrvkld72hogu9ph3e",
-     "originalStartTime": {
-      "dateTime": "2020-06-06T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "4eahs9ghkhrvkld72hogu9ph3e@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181159875584000\"",
-     "id": "3qtd6uscq4tsi6gc7nmmtpqlct_20200608T120000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=M3F0ZDZ1c2NxNHRzaTZnYzdubW10cHFsY3RfMjAyMDA2MDhUMTIwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:14:30.000Z",
-     "updated": "2020-05-27T11:45:37.792Z",
-     "summary": "React is Fun",
-     "description": "Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ",
-     "location": "Berlin, Germany",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-08T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-08T15:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "3qtd6uscq4tsi6gc7nmmtpqlct",
-     "originalStartTime": {
-      "dateTime": "2020-06-08T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "3qtd6uscq4tsi6gc7nmmtpqlct@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181161784712000\"",
-     "id": "4eahs9ghkhrvkld72hogu9ph3e_20200609T140000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=NGVhaHM5Z2hraHJ2a2xkNzJob2d1OXBoM2VfMjAyMDA2MDlUMTQwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:17:46.000Z",
-     "updated": "2020-05-27T12:01:32.356Z",
-     "summary": "Learn JavaScript",
-     "description": "Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.",
-     "location": "London, UK",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-09T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-09T17:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "4eahs9ghkhrvkld72hogu9ph3e",
-     "originalStartTime": {
-      "dateTime": "2020-06-09T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "4eahs9ghkhrvkld72hogu9ph3e@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181159875584000\"",
-     "id": "3qtd6uscq4tsi6gc7nmmtpqlct_20200610T120000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=M3F0ZDZ1c2NxNHRzaTZnYzdubW10cHFsY3RfMjAyMDA2MTBUMTIwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:14:30.000Z",
-     "updated": "2020-05-27T11:45:37.792Z",
-     "summary": "React is Fun",
-     "description": "Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ",
-     "location": "Berlin, Germany",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-10T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-10T15:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "3qtd6uscq4tsi6gc7nmmtpqlct",
-     "originalStartTime": {
-      "dateTime": "2020-06-10T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "3qtd6uscq4tsi6gc7nmmtpqlct@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181161784712000\"",
-     "id": "4eahs9ghkhrvkld72hogu9ph3e_20200611T140000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=NGVhaHM5Z2hraHJ2a2xkNzJob2d1OXBoM2VfMjAyMDA2MTFUMTQwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:17:46.000Z",
-     "updated": "2020-05-27T12:01:32.356Z",
-     "summary": "Learn JavaScript",
-     "description": "Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.",
-     "location": "London, UK",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-11T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-11T17:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "4eahs9ghkhrvkld72hogu9ph3e",
-     "originalStartTime": {
-      "dateTime": "2020-06-11T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "4eahs9ghkhrvkld72hogu9ph3e@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181159875584000\"",
-     "id": "3qtd6uscq4tsi6gc7nmmtpqlct_20200612T120000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=M3F0ZDZ1c2NxNHRzaTZnYzdubW10cHFsY3RfMjAyMDA2MTJUMTIwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:14:30.000Z",
-     "updated": "2020-05-27T11:45:37.792Z",
-     "summary": "React is Fun",
-     "description": "Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ",
-     "location": "Berlin, Germany",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-12T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-12T15:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "3qtd6uscq4tsi6gc7nmmtpqlct",
-     "originalStartTime": {
-      "dateTime": "2020-06-12T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "3qtd6uscq4tsi6gc7nmmtpqlct@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181161784712000\"",
-     "id": "4eahs9ghkhrvkld72hogu9ph3e_20200613T140000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=NGVhaHM5Z2hraHJ2a2xkNzJob2d1OXBoM2VfMjAyMDA2MTNUMTQwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:17:46.000Z",
-     "updated": "2020-05-27T12:01:32.356Z",
-     "summary": "Learn JavaScript",
-     "description": "Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.",
-     "location": "London, UK",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-13T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-13T17:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "4eahs9ghkhrvkld72hogu9ph3e",
-     "originalStartTime": {
-      "dateTime": "2020-06-13T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "4eahs9ghkhrvkld72hogu9ph3e@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181159875584000\"",
-     "id": "3qtd6uscq4tsi6gc7nmmtpqlct_20200615T120000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=M3F0ZDZ1c2NxNHRzaTZnYzdubW10cHFsY3RfMjAyMDA2MTVUMTIwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:14:30.000Z",
-     "updated": "2020-05-27T11:45:37.792Z",
-     "summary": "React is Fun",
-     "description": "Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ",
-     "location": "Berlin, Germany",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-15T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-15T15:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "3qtd6uscq4tsi6gc7nmmtpqlct",
-     "originalStartTime": {
-      "dateTime": "2020-06-15T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "3qtd6uscq4tsi6gc7nmmtpqlct@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181161784712000\"",
-     "id": "4eahs9ghkhrvkld72hogu9ph3e_20200616T140000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=NGVhaHM5Z2hraHJ2a2xkNzJob2d1OXBoM2VfMjAyMDA2MTZUMTQwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:17:46.000Z",
-     "updated": "2020-05-27T12:01:32.356Z",
-     "summary": "Learn JavaScript",
-     "description": "Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.",
-     "location": "London, UK",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-16T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-16T17:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "4eahs9ghkhrvkld72hogu9ph3e",
-     "originalStartTime": {
-      "dateTime": "2020-06-16T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "4eahs9ghkhrvkld72hogu9ph3e@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181159875584000\"",
-     "id": "3qtd6uscq4tsi6gc7nmmtpqlct_20200617T120000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=M3F0ZDZ1c2NxNHRzaTZnYzdubW10cHFsY3RfMjAyMDA2MTdUMTIwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:14:30.000Z",
-     "updated": "2020-05-27T11:45:37.792Z",
-     "summary": "React is Fun",
-     "description": "Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ",
-     "location": "Berlin, Germany",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-17T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-17T15:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "3qtd6uscq4tsi6gc7nmmtpqlct",
-     "originalStartTime": {
-      "dateTime": "2020-06-17T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "3qtd6uscq4tsi6gc7nmmtpqlct@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181161784712000\"",
-     "id": "4eahs9ghkhrvkld72hogu9ph3e_20200618T140000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=NGVhaHM5Z2hraHJ2a2xkNzJob2d1OXBoM2VfMjAyMDA2MThUMTQwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:17:46.000Z",
-     "updated": "2020-05-27T12:01:32.356Z",
-     "summary": "Learn JavaScript",
-     "description": "Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.",
-     "location": "London, UK",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-18T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-18T17:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "4eahs9ghkhrvkld72hogu9ph3e",
-     "originalStartTime": {
-      "dateTime": "2020-06-18T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "4eahs9ghkhrvkld72hogu9ph3e@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181159875584000\"",
-     "id": "3qtd6uscq4tsi6gc7nmmtpqlct_20200619T120000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=M3F0ZDZ1c2NxNHRzaTZnYzdubW10cHFsY3RfMjAyMDA2MTlUMTIwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:14:30.000Z",
-     "updated": "2020-05-27T11:45:37.792Z",
-     "summary": "React is Fun",
-     "description": "Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ",
-     "location": "Berlin, Germany",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-19T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-19T15:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "3qtd6uscq4tsi6gc7nmmtpqlct",
-     "originalStartTime": {
-      "dateTime": "2020-06-19T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "3qtd6uscq4tsi6gc7nmmtpqlct@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181161784712000\"",
-     "id": "4eahs9ghkhrvkld72hogu9ph3e_20200620T140000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=NGVhaHM5Z2hraHJ2a2xkNzJob2d1OXBoM2VfMjAyMDA2MjBUMTQwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:17:46.000Z",
-     "updated": "2020-05-27T12:01:32.356Z",
-     "summary": "Learn JavaScript",
-     "description": "Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.",
-     "location": "London, UK",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-20T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-20T17:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "4eahs9ghkhrvkld72hogu9ph3e",
-     "originalStartTime": {
-      "dateTime": "2020-06-20T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "4eahs9ghkhrvkld72hogu9ph3e@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181159875584000\"",
-     "id": "3qtd6uscq4tsi6gc7nmmtpqlct_20200622T120000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=M3F0ZDZ1c2NxNHRzaTZnYzdubW10cHFsY3RfMjAyMDA2MjJUMTIwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:14:30.000Z",
-     "updated": "2020-05-27T11:45:37.792Z",
-     "summary": "React is Fun",
-     "description": "Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ",
-     "location": "Berlin, Germany",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-22T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-22T15:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "3qtd6uscq4tsi6gc7nmmtpqlct",
-     "originalStartTime": {
-      "dateTime": "2020-06-22T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "3qtd6uscq4tsi6gc7nmmtpqlct@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181161784712000\"",
-     "id": "4eahs9ghkhrvkld72hogu9ph3e_20200623T140000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=NGVhaHM5Z2hraHJ2a2xkNzJob2d1OXBoM2VfMjAyMDA2MjNUMTQwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:17:46.000Z",
-     "updated": "2020-05-27T12:01:32.356Z",
-     "summary": "Learn JavaScript",
-     "description": "Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.",
-     "location": "London, UK",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-23T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-23T17:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "4eahs9ghkhrvkld72hogu9ph3e",
-     "originalStartTime": {
-      "dateTime": "2020-06-23T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "4eahs9ghkhrvkld72hogu9ph3e@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181159875584000\"",
-     "id": "3qtd6uscq4tsi6gc7nmmtpqlct_20200624T120000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=M3F0ZDZ1c2NxNHRzaTZnYzdubW10cHFsY3RfMjAyMDA2MjRUMTIwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:14:30.000Z",
-     "updated": "2020-05-27T11:45:37.792Z",
-     "summary": "React is Fun",
-     "description": "Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ",
-     "location": "Berlin, Germany",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-24T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-24T15:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "3qtd6uscq4tsi6gc7nmmtpqlct",
-     "originalStartTime": {
-      "dateTime": "2020-06-24T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "3qtd6uscq4tsi6gc7nmmtpqlct@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181161784712000\"",
-     "id": "4eahs9ghkhrvkld72hogu9ph3e_20200625T140000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=NGVhaHM5Z2hraHJ2a2xkNzJob2d1OXBoM2VfMjAyMDA2MjVUMTQwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:17:46.000Z",
-     "updated": "2020-05-27T12:01:32.356Z",
-     "summary": "Learn JavaScript",
-     "description": "Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.",
-     "location": "London, UK",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-25T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-25T17:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "4eahs9ghkhrvkld72hogu9ph3e",
-     "originalStartTime": {
-      "dateTime": "2020-06-25T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "4eahs9ghkhrvkld72hogu9ph3e@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181159875584000\"",
-     "id": "3qtd6uscq4tsi6gc7nmmtpqlct_20200626T120000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=M3F0ZDZ1c2NxNHRzaTZnYzdubW10cHFsY3RfMjAyMDA2MjZUMTIwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:14:30.000Z",
-     "updated": "2020-05-27T11:45:37.792Z",
-     "summary": "React is Fun",
-     "description": "Love HTML, CSS, and JS? Want to become a cool front-end developer? \n\nReact is one of the most popular front-end frameworks. There is a huge number of job openings for React developers in most cities. \n\nJoin us in our free React training sessions and give your career a new direction. ",
-     "location": "Berlin, Germany",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-26T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-26T15:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "3qtd6uscq4tsi6gc7nmmtpqlct",
-     "originalStartTime": {
-      "dateTime": "2020-06-26T14:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "3qtd6uscq4tsi6gc7nmmtpqlct@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    },
-    {
-     "kind": "calendar#event",
-     "etag": "\"3181161784712000\"",
-     "id": "4eahs9ghkhrvkld72hogu9ph3e_20200627T140000Z",
-     "status": "confirmed",
-     "htmlLink": "https://www.google.com/calendar/event?eid=NGVhaHM5Z2hraHJ2a2xkNzJob2d1OXBoM2VfMjAyMDA2MjdUMTQwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
-     "created": "2020-05-19T19:17:46.000Z",
-     "updated": "2020-05-27T12:01:32.356Z",
-     "summary": "Learn JavaScript",
-     "description": "Have you wondered how you can ask Google to show you the list of the top ten must-see places in London? And how Google presents you the list? How can you submit the details of an application? Well, JavaScript is doing these. :) \n\nJavascript offers interactivity to a dull, static website. Come, learn JavaScript with us and make those beautiful websites.",
-     "location": "London, UK",
-     "creator": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "organizer": {
-      "email": "fullstackwebdev@careerfoundry.com",
-      "self": true
-     },
-     "start": {
-      "dateTime": "2020-06-27T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "end": {
-      "dateTime": "2020-06-27T17:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "recurringEventId": "4eahs9ghkhrvkld72hogu9ph3e",
-     "originalStartTime": {
-      "dateTime": "2020-06-27T16:00:00+02:00",
-      "timeZone": "Europe/Berlin"
-     },
-     "iCalUID": "4eahs9ghkhrvkld72hogu9ph3e@google.com",
-     "sequence": 0,
-     "reminders": {
-      "useDefault": true
-     },
-     "eventType": "default"
-    }
-   ];
-  
-  export default mockData;
-  
-  
-  
+        kind: "calendar#event",
+        etag: '"3181159875584017"',
+        id: "london_event_1",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=london_event_1",
+        created: "2020-06-01T09:00:46.000Z",
+        updated: "2020-06-02T12:08:23.292Z",
+        summary: "Fintech Conference",
+        description: "Annual conference on fintech innovations.",
+        location: "London, UK",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-07-01T10:00:00+01:00", timeZone: "Europe/London" },
+        end: { dateTime: "2020-07-01T12:00:00+01:00", timeZone: "Europe/London" },
+        iCalUID: "london_event_1@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584018"',
+        id: "london_event_2",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=london_event_2",
+        created: "2020-06-01T10:00:46.000Z",
+        updated: "2020-06-02T13:08:23.292Z",
+        summary: "AI Expo",
+        description: "Explore the latest in artificial intelligence and its applications.",
+        location: "London, UK",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-07-02T09:00:00+01:00", timeZone: "Europe/London" },
+        end: { dateTime: "2020-07-02T15:00:00+01:00", timeZone: "Europe/London" },
+        iCalUID: "london_event_2@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584019"',
+        id: "london_event_3",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=london_event_3",
+        created: "2020-06-02T09:00:46.000Z",
+        updated: "2020-06-02T14:08:23.292Z",
+        summary: "Data Science Bootcamp",
+        description: "An intensive bootcamp for aspiring data scientists.",
+        location: "London, UK",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-07-03T09:00:00+01:00", timeZone: "Europe/London" },
+        end: { dateTime: "2020-07-03T17:00:00+01:00", timeZone: "Europe/London" },
+        iCalUID: "london_event_3@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584020"',
+        id: "london_event_4",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=london_event_4",
+        created: "2020-06-03T09:00:46.000Z",
+        updated: "2020-06-03T15:08:23.292Z",
+        summary: "Cybersecurity Summit",
+        description: "A summit on the latest trends and threats in cybersecurity.",
+        location: "London, UK",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-07-04T09:00:00+01:00", timeZone: "Europe/London" },
+        end: { dateTime: "2020-07-04T13:00:00+01:00", timeZone: "Europe/London" },
+        iCalUID: "london_event_4@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584021"',
+        id: "london_event_5",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=london_event_5",
+        created: "2020-06-04T09:00:46.000Z",
+        updated: "2020-06-04T16:08:23.292Z",
+        summary: "DevOps Masterclass",
+        description: "An in-depth masterclass on DevOps tools and methodologies.",
+        location: "London, UK",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-07-05T10:00:00+01:00", timeZone: "Europe/London" },
+        end: { dateTime: "2020-07-05T16:00:00+01:00", timeZone: "Europe/London" },
+        iCalUID: "london_event_5@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584022"',
+        id: "london_event_6",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=london_event_6",
+        created: "2020-06-05T09:00:46.000Z",
+        updated: "2020-06-05T16:08:23.292Z",
+        summary: "React Workshop",
+        description: "Hands-on workshop on React development.",
+        location: "London, UK",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-07-06T14:00:00+01:00", timeZone: "Europe/London" },
+        end: { dateTime: "2020-07-06T16:00:00+01:00", timeZone: "Europe/London" },
+        iCalUID: "london_event_6@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584023"',
+        id: "london_event_7",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=london_event_7",
+        created: "2020-06-06T09:00:46.000Z",
+        updated: "2020-06-06T17:08:23.292Z",
+        summary: "Python for Data Science",
+        description: "Learn Python for data science in this comprehensive workshop.",
+        location: "London, UK",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-07-07T10:00:00+01:00", timeZone: "Europe/London" },
+        end: { dateTime: "2020-07-07T12:00:00+01:00", timeZone: "Europe/London" },
+        iCalUID: "london_event_7@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584024"',
+        id: "london_event_8",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=london_event_8",
+        created: "2020-06-07T09:00:46.000Z",
+        updated: "2020-06-07T17:08:23.292Z",
+        summary: "Serverless Architecture Conference",
+        description: "Explore serverless technologies in this conference.",
+        location: "London, UK",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-07-08T09:00:00+01:00", timeZone: "Europe/London" },
+        end: { dateTime: "2020-07-08T17:00:00+01:00", timeZone: "Europe/London" },
+        iCalUID: "london_event_8@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584034"',
+        id: "london_event_9",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=london_event_9",
+        created: "2020-06-09T10:00:46.000Z",
+        updated: "2020-06-09T12:08:23.292Z",
+        summary: "London Coding Bootcamp",
+        description: "Intensive coding bootcamp for aspiring developers.",
+        location: "London, UK",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-07-09T10:00:00+01:00", timeZone: "Europe/London" },
+        end: { dateTime: "2020-07-09T16:00:00+01:00", timeZone: "Europe/London" },
+        iCalUID: "london_event_9@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584035"',
+        id: "london_event_10",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=london_event_10",
+        created: "2020-06-10T10:00:46.000Z",
+        updated: "2020-06-10T13:08:23.292Z",
+        summary: "Art Exhibition Opening",
+        description: "Opening night for a new art exhibition in London.",
+        location: "London, UK",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-07-10T19:00:00+01:00", timeZone: "Europe/London" },
+        end: { dateTime: "2020-07-10T22:00:00+01:00", timeZone: "Europe/London" },
+        iCalUID: "london_event_10@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584036"',
+        id: "london_event_11",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=london_event_11",
+        created: "2020-06-11T10:00:46.000Z",
+        updated: "2020-06-11T14:08:23.292Z",
+        summary: "Finance Networking Event",
+        description: "Connect with professionals in the finance industry.",
+        location: "London, UK",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-07-11T18:00:00+01:00", timeZone: "Europe/London" },
+        end: { dateTime: "2020-07-11T21:00:00+01:00", timeZone: "Europe/London" },
+        iCalUID: "london_event_11@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584037"',
+        id: "london_event_12",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=london_event_12",
+        created: "2020-06-12T10:00:46.000Z",
+        updated: "2020-06-12T15:08:23.292Z",
+        summary: "London Book Fair",
+        description: "Explore the latest trends in publishing and literature.",
+        location: "London, UK",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-07-12T09:00:00+01:00", timeZone: "Europe/London" },
+        end: { dateTime: "2020-07-12T17:00:00+01:00", timeZone: "Europe/London" },
+        iCalUID: "london_event_12@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584038"',
+        id: "london_event_13",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=london_event_13",
+        created: "2020-06-13T10:00:46.000Z",
+        updated: "2020-06-13T16:08:23.292Z",
+        summary: "Film Festival Screening",
+        description: "Enjoy a selection of films from international filmmakers.",
+        location: "London, UK",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-07-13T18:30:00+01:00", timeZone: "Europe/London" },
+        end: { dateTime: "2020-07-13T21:30:00+01:00", timeZone: "Europe/London" },
+        iCalUID: "london_event_13@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584039"',
+        id: "london_event_14",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=london_event_14",
+        created: "2020-06-14T10:00:46.000Z",
+        updated: "2020-06-14T17:08:23.292Z",
+        summary: "Charity Gala Dinner",
+        description: "Join us for an evening of fine dining and fundraising.",
+        location: "London, UK",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-07-14T19:00:00+01:00", timeZone: "Europe/London" },
+        end: { dateTime: "2020-07-14T23:00:00+01:00", timeZone: "Europe/London" },
+        iCalUID: "london_event_14@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584040"',
+        id: "london_event_15",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=london_event_15",
+        created: "2020-06-15T10:00:46.000Z",
+        updated: "2020-06-15T18:08:23.292Z",
+        summary: "Tech Talk: AI Innovations",
+        description: "Explore the latest innovations in artificial intelligence.",
+        location: "London, UK",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-07-15T10:00:00+01:00", timeZone: "Europe/London" },
+        end: { dateTime: "2020-07-15T12:00:00+01:00", timeZone: "Europe/London" },
+        iCalUID: "london_event_15@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+      {
+        kind: "calendar#event",
+        etag: '"3181159875584041"',
+        id: "london_event_16",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=london_event_16",
+        created: "2020-06-16T10:00:46.000Z",
+        updated: "2020-06-16T19:08:23.292Z",
+        summary: "Business Leadership Summit",
+        description: "A summit for business leaders to share insights.",
+        location: "London, UK",
+        creator: { email: "example@domain.com", self: true },
+        organizer: { email: "example@domain.com", self: true },
+        start: { dateTime: "2020-07-16T09:00:00+01:00", timeZone: "Europe/London" },
+        end: { dateTime: "2020-07-16T17:00:00+01:00", timeZone: "Europe/London" },
+        iCalUID: "london_event_16@google.com",
+        sequence: 0,
+        reminders: { useDefault: true },
+        eventType: "default",
+      },
+    ];
+    
+    export default events;
+    
+    
   

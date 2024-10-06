@@ -5,36 +5,46 @@ import CitySearch from './components/CitySearch';
 import NumberOfEvents from './components/NumberOfEvents';
 import EventList from './components/EventList';
 import { getEvents } from './api';
-import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert'; // Import WarningAlert
+import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert'; 
+import CityEventsChart from './components/CityEventsChart'; 
+import EventGenresChart from './components/EventGenresChart'; 
 import './App.css';
 
 const App = () => {
-  const [allLocations] = useState([]); // Removed the unused setAllLocations
+  const [allLocations] = useState([]); 
   const [currentNOE, setCurrentNOE] = useState(32);
   const [events, setEvents] = useState([]);
   const [currentCity, setCurrentCity] = useState("See all cities");
-  const [infoAlert, setInfoAlert] = useState(""); // New state for InfoAlert
-  const [errorAlert, setErrorAlert] = useState(""); // New state for ErrorAlert
-  const [warningAlert, setWarningAlert] = useState(""); // New state for WarningAlert
+  const [infoAlert, setInfoAlert] = useState(""); 
+  const [errorAlert, setErrorAlert] = useState(""); 
+  const [warningAlert, setWarningAlert] = useState(""); 
 
   useEffect(() => {
     const fetchData = async () => {
       const fetchedEvents = await getEvents(currentCity, currentNOE);
       setEvents(fetchedEvents);
-    };
 
-    if (navigator.onLine) {
-      setWarningAlert(""); // Online: no warning
-    } else {
-      setWarningAlert("You are offline. The displayed events may not be up to date.");
-    }
+      if (navigator.onLine) {
+        localStorage.setItem('cachedEvents', JSON.stringify(fetchedEvents)); 
+        setWarningAlert(""); 
+      } else {
+        const cachedEvents = localStorage.getItem('cachedEvents');
+        if (cachedEvents) {
+          setEvents(JSON.parse(cachedEvents)); 
+          setWarningAlert("You are offline. The displayed events are loaded from the cache and may not be up to date.");
+        } else {
+          setWarningAlert("You are offline and no cached events are available.");
+        }
+      }
+    };
 
     fetchData();
   }, [currentCity, currentNOE]);
 
   return (
     <div className="App">
-      <div className="alerts-container"> {/* Container for alerts */}
+      <h1>Meet App</h1>
+      <div className="alerts-container">
         {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
         {errorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
         {warningAlert.length ? <WarningAlert text={warningAlert} /> : null}
@@ -42,13 +52,17 @@ const App = () => {
       <CitySearch
         allLocations={allLocations}
         setCurrentCity={setCurrentCity}
-        setInfoAlert={setInfoAlert} // Passing setInfoAlert to CitySearch
+        setInfoAlert={setInfoAlert} 
       />
       <NumberOfEvents
         setCurrentNOE={setCurrentNOE}
-        setErrorAlert={setErrorAlert} // Passing setErrorAlert to NumberOfEvents
+        setErrorAlert={setErrorAlert} 
       />
-      <EventList events={events} />
+      <div className='charts-container'>
+        <CityEventsChart events={events} />
+        <EventGenresChart events={events} />
+      </div>
+      <EventList events={events} currentCity={currentCity} /> {/* Pass currentCity */}
     </div>
   );
 };
