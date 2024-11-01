@@ -33,47 +33,50 @@ module.exports.getAuthURL = async () => {
 };
 
 module.exports.getAccessToken = async (event) => {
-  const { code } = event.queryStringParameters;
-  
-  if (!code) {
-    return {
-      statusCode: 400,
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Credentials': true,
-      },
-      body: JSON.stringify({ error: 'Code parameter is missing' }),
-    };
-  }
+  const code = decodeURIComponent(`${event.pathParameters.code}`);
 
-  try {
-    const { tokens } = await oAuth2Client.getToken(code);
-    oAuth2Client.setCredentials(tokens);
-
-    return {
-      statusCode: 200,
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Credentials': true,
-      },
-      body: JSON.stringify({
-        access_token: tokens.access_token,
-      }),
-    };
-  } catch (error) {
-    return {
-      statusCode: 500,
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Credentials': true,
-      },
-      body: JSON.stringify({ error: error.message }),
-    };
-  }
+  return new Promise((resolve, reject) => {
+    oAuth2Client.getToken(code, (error, response) => {
+      if (error) {
+        return reject({
+          statusCode: 500,
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Credentials': true,
+          },
+          body: JSON.stringify({ error: error.message }),
+        });
+      }
+      return resolve(response);
+    });
+  })
+    .then((results) => {
+      oAuth2Client.setCredentials(results.tokens);
+      return {
+        statusCode: 200,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Credentials': true,
+        },
+        body: JSON.stringify({
+          access_token: results.tokens.access_token,
+        }),
+      };
+    })
+    .catch((error) => {
+      return {
+        statusCode: 500,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Credentials': true,
+        },
+        body: JSON.stringify({ error: error.message }),
+      };
+    });
 };
 
 module.exports.getCalendarEvents = async (event) => {
-  const access_token = event.pathParameters.access_token;
+  const access_token = decodeURIComponent(`${event.pathParameters.access_token}`);
 
   if (!access_token) {
     return {
