@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/meet/static/css/main.e7557bc8.css",
+    "main.js": "/meet/static/js/main.2146dead.js",
+    "static/js/437.c856fe11.chunk.js": "/meet/static/js/437.c856fe11.chunk.js",
+    "static/js/190.97ae02ed.chunk.js": "/meet/static/js/190.97ae02ed.chunk.js",
+    "static/js/504.a9addbb1.chunk.js": "/meet/static/js/504.a9addbb1.chunk.js",
+    "static/js/567.b3339f4b.chunk.js": "/meet/static/js/567.b3339f4b.chunk.js",
+    "static/js/488.f883cc54.chunk.js": "/meet/static/js/488.f883cc54.chunk.js",
+    "static/css/784.ce3e36a2.chunk.css": "/meet/static/css/784.ce3e36a2.chunk.css",
+    "static/js/784.1c13a2e7.chunk.js": "/meet/static/js/784.1c13a2e7.chunk.js",
+    "static/js/163.5a47c71b.chunk.js": "/meet/static/js/163.5a47c71b.chunk.js",
+    "static/media/bootstrap-icons.woff?": "/meet/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/headLogo.webp": "/meet/static/media/headLogo.a2e7b2d73a8f492eb15d.webp",
+    "static/media/bootstrap-icons.woff2?": "/meet/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "service-worker.js": "/meet/service-worker.js",
+    "index.html": "/meet/index.html",
+    "main.e7557bc8.css.map": "/meet/static/css/main.e7557bc8.css.map",
+    "main.2146dead.js.map": "/meet/static/js/main.2146dead.js.map",
+    "437.c856fe11.chunk.js.map": "/meet/static/js/437.c856fe11.chunk.js.map",
+    "190.97ae02ed.chunk.js.map": "/meet/static/js/190.97ae02ed.chunk.js.map",
+    "504.a9addbb1.chunk.js.map": "/meet/static/js/504.a9addbb1.chunk.js.map",
+    "567.b3339f4b.chunk.js.map": "/meet/static/js/567.b3339f4b.chunk.js.map",
+    "488.f883cc54.chunk.js.map": "/meet/static/js/488.f883cc54.chunk.js.map",
+    "784.ce3e36a2.chunk.css.map": "/meet/static/css/784.ce3e36a2.chunk.css.map",
+    "784.1c13a2e7.chunk.js.map": "/meet/static/js/784.1c13a2e7.chunk.js.map",
+    "163.5a47c71b.chunk.js.map": "/meet/static/js/163.5a47c71b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e7557bc8.css",
+    "static/js/main.2146dead.js"
+  ]
+}
