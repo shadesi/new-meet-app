@@ -20,6 +20,8 @@ module.exports.getAuthURL = async () => {
     scope: SCOPES,
   });
 
+  console.log('Generated Auth URL:', authUrl);
+
   return {
     statusCode: 200,
     headers: {
@@ -34,10 +36,12 @@ module.exports.getAuthURL = async () => {
 
 module.exports.getAccessToken = async (event) => {
   const code = decodeURIComponent(`${event.pathParameters.code}`);
+  console.log('Received code:', code);
 
   return new Promise((resolve, reject) => {
     oAuth2Client.getToken(code, (error, response) => {
       if (error) {
+        console.error('Error getting token:', error);
         return reject({
           statusCode: 500,
           headers: {
@@ -47,10 +51,12 @@ module.exports.getAccessToken = async (event) => {
           body: JSON.stringify({ error: error.message }),
         });
       }
+      console.log('Token response:', response);
       return resolve(response);
     });
   })
     .then((results) => {
+      console.log('Token results:', results);
       oAuth2Client.setCredentials(results.tokens);
       return {
         statusCode: 200,
@@ -64,6 +70,7 @@ module.exports.getAccessToken = async (event) => {
       };
     })
     .catch((error) => {
+      console.error('Error in getAccessToken:', error);
       return {
         statusCode: 500,
         headers: {
@@ -77,6 +84,7 @@ module.exports.getAccessToken = async (event) => {
 
 module.exports.getCalendarEvents = async (event) => {
   const access_token = decodeURIComponent(`${event.pathParameters.access_token}`);
+  console.log('Received access token:', access_token);
 
   if (!access_token) {
     return {
@@ -102,6 +110,7 @@ module.exports.getCalendarEvents = async (event) => {
       },
       (error, response) => {
         if (error) {
+          console.error('Error fetching events:', error);
           reject({
             statusCode: 500,
             headers: {
@@ -111,6 +120,7 @@ module.exports.getCalendarEvents = async (event) => {
             body: JSON.stringify({ error: error.message }),
           });
         } else {
+          console.log('Events response:', response);
           resolve({
             statusCode: 200,
             headers: {
